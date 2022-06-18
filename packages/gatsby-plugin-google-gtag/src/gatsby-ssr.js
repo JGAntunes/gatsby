@@ -62,9 +62,9 @@ exports.onRenderBody = (
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         ${
-          if (gtagConsent && gtagConsent.length) {
-            `gtag('consent', 'default', ${JSON.stringify(gtagConsent)});`
-          }
+          Object.keys(gtagConsent).length
+            ? `gtag('consent', 'default', ${JSON.stringify(gtagConsent)});`
+            : ``
         }
         gtag('js', new Date());
 
