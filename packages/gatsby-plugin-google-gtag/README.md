@@ -2,6 +2,8 @@
 
 Easily add Google Global Site Tag to your Gatsby site.
 
+> This release is a fork of the original version within the gatsby repo with a feature by @imreFitos applied (https://github.com/gatsbyjs/gatsby/pull/35929)
+
 > The global site tag (gtag.js) is a JavaScript tagging framework and API that allows you to send event data to Google Analytics, Google Ads, Campaign Manager, Display & Video 360, and Search Ads 360.
 
 Global site tag (gtag.js) is meant to combine multiple Google tagging systems and can replace older ones such as [analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/) ([gatsby-plugin-google-analytics](https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/)).
@@ -36,8 +38,8 @@ module.exports = {
         // Optional - if you want to set default consent settings
         // this example disables ad and analytics cookies
         gtagConsent: {
-          ad_storage: 'denied',
-          analytics_storage: 'denied'
+          ad_storage: "denied",
+          analytics_storage: "denied",
         },
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
